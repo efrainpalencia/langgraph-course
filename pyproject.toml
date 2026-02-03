@@ -1,0 +1,23 @@
+[project]
+name = "langgraph-course"
+version = "0.1.0"
+description = "A course on building agents with langgraph"
+authors = [
+    {name = "Efrain Palencia",email = "efrainpalencia@hotmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13,<4.0"
+dependencies = [
+    "langchain (>=1.2.8,<2.0.0)",
+    "langchain-openai (>=1.1.7,<2.0.0)",
+    "langchain-tavily (>=0.2.17,<0.3.0)",
+    "langgraph (>=1.0.7,<2.0.0)",
+    "python-dotenv (>=1.2.1,<2.0.0)",
+    "black (>=26.1.0,<27.0.0)",
+    "isort (>=7.0.0,<8.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
