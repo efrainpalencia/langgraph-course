@@ -1,10 +1,10 @@
 import os
-from dotenv import load_dotenv
 
-from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_community.document_loaders import WebBaseLoader
+from dotenv import load_dotenv
 from langchain_chroma import Chroma
+from langchain_community.document_loaders import WebBaseLoader
 from langchain_openai import OpenAIEmbeddings
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 load_dotenv()
 
@@ -32,11 +32,11 @@ else:
         documents=doc_splits,
         collection_name="rag-chroma",
         embedding=OpenAIEmbeddings(),
-        persist_directory="./.chroma"
+        persist_directory="./.chroma",
     )
 
 retriever = Chroma(
     collection_name="rag-chroma",
     embedding_function=OpenAIEmbeddings(),
-    persist_directory="./.chroma"
+    persist_directory="./.chroma",
 ).as_retriever()

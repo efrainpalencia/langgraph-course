@@ -17,14 +17,12 @@ dependencies = [
     "beautifulsoup4 (>=4.14.3,<5.0.0)",
     "langchainhub (>=0.1.21,<0.2.0)",
     "langchain-community (>=0.4.1,<0.5.0)",
-    "tavily-python (>=0.7.21,<0.8.0)",
     "chromadb (>=1.4.1,<2.0.0)",
     "pytest (>=9.0.2,<10.0.0)",
     "langchain-openai (>=1.1.7,<2.0.0)",
     "langchain-text-splitters (>=1.1.0,<2.0.0)",
     "langchain-chroma (>=1.1.0,<2.0.0)"
 ]
-
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]

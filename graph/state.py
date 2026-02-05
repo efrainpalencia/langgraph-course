@@ -11,6 +11,7 @@ class GraphState(TypedDict):
         web_search: whether to add search
         documents: list of documents
     """
+
     question: str
     generation: str
     web_search: bool
