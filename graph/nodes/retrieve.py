@@ -5,16 +5,16 @@ from ingestion import retriever
 
 
 def retrieve(state: GraphState) -> Dict[str, Any]:
-    """
-    Retrieves documents from vector database.
+    """Retrieves documents from vector database.
 
-    :param state: Description
-    :type state: GraphState
-    :return: Description
-    :rtype: Dict[str, Any]
+    Args:
+        state (GraphState): User's question
+
+    Returns:
+        Dict[str, Any]: Relevant documents along with the question.
     """
     print("---RETRIEVE---")
     question = state["question"]
 
-    documents = retrieve.invoke(question)
+    documents = retriever.invoke(question)
     return {"documents": documents, "question": question}

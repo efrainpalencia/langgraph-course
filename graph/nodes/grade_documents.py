@@ -5,13 +5,13 @@ from graph.state import GraphState
 
 
 def grade_documents(state: GraphState) -> Dict[str, Any]:
-    """
-    Grades documents' relevance to a user's question with a score of yes or no.
+    """Grades documents' relevance to a user's question with a score of yes or no.
 
-    :param state: question and documents
-    :type state: GraphState
-    :return: Filtered documents, question, and web search flag
-    :rtype: Dict[str, Any]
+    Args:
+        state (GraphState): Current state of question and documents
+
+    Returns:
+        Dict[str, Any]: Filtered documents, user question, and web_search flagged to True or False.
     """
     print("---CHECK DOCUMENT RELEVANCE TO QUESTION---")
 
@@ -23,7 +23,7 @@ def grade_documents(state: GraphState) -> Dict[str, Any]:
 
     for d in documents:
         score = retrieval_grader.invoke(
-            {"question": question, "documents": d.page_content}
+            {"question": question, "document": d.page_content}
         )
         grade = score.binary_score
         if grade.lower() == "yes":
