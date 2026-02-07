@@ -9,4 +9,4 @@ if __name__ == "__main__":
 
     # Invokes the graph orchestration with a question
     print(app.invoke(
-        input={"question": "What is agent memory?"}))
+        input={"question": "What is short-term memory?"}))

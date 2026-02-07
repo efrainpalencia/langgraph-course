@@ -60,6 +60,6 @@ def web_search(state: GraphState) -> Dict[str, Any]:
 
 if __name__ == "__main__":
     print(web_search(
-        state={"question": "What is agent memory?", "documents": None}))
+        state={"question": "What is a pizza?", "documents": None}))
 
     print("Breakpoint")
