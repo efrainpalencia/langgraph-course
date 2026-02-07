@@ -51,9 +51,15 @@ def web_search(state: GraphState) -> Dict[str, Any]:
     joined_tavily_result = extract_web_content(tavily_results)
 
     web_results = Document(page_content=joined_tavily_result)
-    print(web_results)
     if documents is not None:
         documents.append(web_results)
     else:
         documents = [web_results]
     return {"documents": documents, "question": question}
+
+
+if __name__ == "__main__":
+    print(web_search(
+        state={"question": "What is agent memory?", "documents": None}))
+
+    print("Breakpoint")
